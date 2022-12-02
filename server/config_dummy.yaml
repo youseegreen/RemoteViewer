@@ -1,0 +1,24 @@
+server:
+  ip: &server_ip "192.168.XX.YY"
+  camera_port: &camera_port 50000
+  pantilt_port: &pantilt_port 50001
+
+camera:
+  ip: *server_ip
+  port: *camera_port
+  is_use: True
+  device: "USBCAMERA"
+  device_id: 1
+  is_use_depth: False
+  image_width: 320
+  image_height: 240
+  image_quality: 10
+  fps: 30
+pantilt:
+  ip: *server_ip
+  port: *pantilt_port
+  is_use: True
+  pan_motor_mac_address: "XX:XX:XX:XX:XX:XX"
+  tilt_motor_mac_address: "YY:YY:YY:YY:YY:YY"
+  interval_time: 1.0
+  maxangle_per_sec: 90
